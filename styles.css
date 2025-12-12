@@ -1,0 +1,43 @@
+/* Estilo simples e responsivo */
+:root{
+  --bg:#121214;
+  --card:#1b1b1e;
+  --accent:#c94a0c;
+  --muted:#bdbdbd;
+  --text:#e9e9ea;
+  --glass: rgba(255,255,255,0.02);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:linear-gradient(180deg,#0f0f10 0%, #131314 48%);color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
+.container{max-width:920px;margin:0 auto;padding:24px;}
+
+.site-header{padding:36px 0 12px;}
+.site-header h1{margin:0;font-size:28px;letter-spacing:0.5px;}
+.site-header .tagline{color:var(--muted);margin-top:6px;font-size:14px;}
+
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:10px;margin-bottom:18px;}
+
+#hero{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:center}
+.placeholder-img{width:100%;height:180px;background:linear-gradient(135deg,#2a1f1b,#3a2a26);display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--muted);font-weight:600}
+.disclaimer{color:#ffcdc0;background:rgba(201,74,12,0.06);padding:10px;border-radius:6px;margin-top:10px;font-size:14px}
+
+.gallery{display:flex;gap:10px;flex-wrap:wrap}
+.thumb{flex:1 1 150px;height:110px;background:#222;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+.note{font-size:13px;color:var(--muted);margin-top:8px}
+
+.form{display:grid;gap:10px;max-width:520px}
+.form input,.form textarea{padding:10px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+.form label{font-size:13px;color:var(--muted)}
+.form button{background:var(--accent);color:white;padding:10px 14px;border:none;border-radius:6px;cursor:pointer}
+.form-status{margin-top:8px;font-size:13px;color:var(--muted)}
+
+.site-footer{padding:16px 0;text-align:center;color:var(--muted);font-size:13px}
+.small{font-size:14px}
+@media (max-width:700px){
+  #hero{grid-template-columns:1fr;grid-auto-rows:auto}
+  .placeholder-img{height:220px}
+}
